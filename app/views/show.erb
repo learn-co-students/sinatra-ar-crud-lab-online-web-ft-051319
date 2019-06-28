@@ -1,0 +1,12 @@
+<html>
+
+  <%=@article.title%>
+  <%=@article.content%>
+
+  <form method="post" action="/articles/<%=@article.id%>">
+    <input id="hidden" type="hidden" name="_method" value="DELETE">
+    <%# #the value attribute here determines the route in the controller, e.g. if value="DELETE" then the route is delete '/articles/:id' do%>
+    <input type="submit" value="delete">
+  </form>
+
+</html>
