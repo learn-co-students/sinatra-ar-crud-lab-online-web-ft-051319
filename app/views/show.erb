@@ -4,5 +4,10 @@
   <h2><%= @article.title %></h2>
   <p><%= @article.content %></p>
   
-  <a href="/article/<%= @article.id %>/edit">Edit Article</a>
+  <p><a href="/articles/<%= @article.id %>/edit">Edit Article</a></p>
+    <form method="post" action="/articles/<%= @article.id %>">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete <%= @article.title %>" >
+  </form>
+  
 </html>
