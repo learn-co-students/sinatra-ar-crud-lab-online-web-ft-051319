@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1><%= @article.title %></h1>
+      <p><%= @article.content %></p>
+      <br>
+      <br>
+      <a href="/articles/<%= @article.id%>/edit"> Edit this article </a>
+
+    <form method="post" action="/articles/<%= @article.id %>">
+      <input type="hidden" name="_method" value="delete" />
+      <input type="submit" value="delete"/>
+    </form>
+
+  </body>
+</html>
