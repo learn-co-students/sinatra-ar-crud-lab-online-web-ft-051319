@@ -29,10 +29,6 @@ end
     @article = Article.create(params)
     redirect to "/articles/#{ @article.id }"
   end
-  # post '/articles' do
-  #   article = Article.create(title: params[:title], content: params[:content])
-  #   redirect "/articles/#{article.id}"
-  # end
 
    # Read /show 
    get "/articles/:id" do
@@ -47,4 +43,19 @@ end
     erb :edit 
 end 
 
-end 
+#update 
+patch "/articles/:id" do
+  @article = Article.find(params[:id])
+  @article.update(params[:article])
+  redirect to "/articles/#{@article.id}"
+end
+
+
+  #destroy
+  delete "/articles/:id" do
+    article = Article.find(params[:id])
+    article.destroy 
+    redirect to '/articles'
+  
+  end
+end
