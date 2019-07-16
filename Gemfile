@@ -5,7 +5,6 @@ gem 'sinatra-activerecord', :require => 'sinatra/activerecord'
 
 gem 'sinatra'
 gem 'thin'
-gem 'require_all'
 gem 'pry-nav'
 gem 'rake'
 gem 'rspec'
