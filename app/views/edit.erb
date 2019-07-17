@@ -1,5 +1,8 @@
 <pre>
-  <form method= 'POST' action='/articles/:id'>
+  <form method= 'POST' action='/articles/<%=@article.id%>'>
+    Title: <input type ='text' name ='title'>
+    Content: <input type = 'text' name= 'content'>
+    <input type= 'submit' id= 'sumbit'>
     <input id="hidden" type="hidden" name="_method" value="PATCH">
   </form>
 </pre>
