@@ -36,6 +36,11 @@ class ApplicationController < Sinatra::Base
     @article = Article.find(params[:id].to_i)
     erb :show
   end
+  
+  delete '/articles/:id' do 
+    @article = Article.find(params[:id].to_i)
+    
+    erb:
 
   get '/' do
   end
