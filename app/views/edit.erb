@@ -1,0 +1,19 @@
+<h2>Current Article Settings:</h2>
+<label for="current_title">Current Title:</label>
+<%= @article.title %>
+<br>
+<label for="current_content">Current Content:</label>
+<%= @article.content %>
+<br>
+<form action="/articles/<%= @article.id %>" method="post">
+  <h2>Edit article:</h2>
+  <input id="hidden" type="hidden" name="_method" value="PATCH">
+  <label for="title">Title:</label>
+  <input id="article_title" type="text" name="title">
+  <br>
+  <label for="content">Content:</label>
+  <input id="article_content" type="text" name="content">
+  <br>
+  <br>
+  <input type="submit" value="SUBMIT" id="Submit">
+</form>
